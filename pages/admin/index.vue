@@ -9,7 +9,7 @@
         <v-navigation-drawer v-model="drawer" app mini-variant hide-overlay>
             <adminSidebar :drawer="drawer" />
         </v-navigation-drawer>
-        <v-app-bar app dense flat v-if="$vuetify.breakpoint.mdAndDown">
+        <v-app-bar app dense flat>
             <v-icon @click="drawer = true">
                 mdi-menu
             </v-icon>
@@ -42,7 +42,7 @@ export default {
     },
     data() {
         return {
-            drawer: false,
+            drawer: this.$vuetify.breakpoint.mdAndDown ? false : true,
             dialog: true,
         };
     },
