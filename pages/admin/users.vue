@@ -60,7 +60,7 @@
                 </template>
             </DynamicScroller>
             <template v-slot:append>
-                <div class="pa-2">
+                <div class="pa-2 pb-5 pb-sm-2">
                     <v-textarea background-color="grey lighten-3" dense flat auto-grow hide-details rounded rows="1"
                         append-outer-icon="mdi-send" v-model="message" required ref="textarea"
                         @click:append-outer="sendMsg()" @keydown.shift.enter="sendMsg()"
