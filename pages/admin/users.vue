@@ -35,8 +35,7 @@
                 </v-list-item-group>
             </v-list>
         </v-navigation-drawer>
-        <v-navigation-drawer width="350" v-model="subdrawer" app right v-show="user_id" height="98%"
-            :style="$vuetify.breakpoint.mdAndDown ? 'width: 100%;' : ''">
+        <v-navigation-drawer width="350" v-model="subdrawer" app right v-show="user_id" height="100%" :style="$vuetify.breakpoint.mdAndDown ? 'width: 100%;' : ''">
             <DynamicScroller :items="msgs" :min-item-size="54" class="scroller" ref="scroller"
                 @resize="scrollToBottom()">
                 <template v-slot="{ item, index, active }">
